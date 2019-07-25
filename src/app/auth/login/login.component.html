@@ -1,0 +1,43 @@
+<form [formGroup]="addressForm" novalidate (ngSubmit)="onSubmit()">
+  <!--<mat-card class="mt-2">-->
+    <mat-card-header dir="rtl">
+      <mat-card-title class="text-center">فرم ورود</mat-card-title>
+    </mat-card-header>
+    <mat-card-content dir="rtl">
+
+      <div class="row">
+          <div class="col">
+           <mat-form-field class="">
+                <input matInput placeholder="نام کاربری" formControlName="username">
+                <mat-error *ngIf="addressForm.controls['username'].hasError('required')">
+                  نام کاربری را <strong>وارد نمائید</strong>
+                </mat-error>
+
+              </mat-form-field>
+        </div>
+          <div class="col">
+
+              <mat-form-field class="">
+                  <input matInput placeholder="رمز عبور" formControlName="password">
+                  <mat-error *ngIf="addressForm.controls['password'].hasError('required')">
+                      رمز عبور را  <strong>وارد نمائید</strong>
+                  </mat-error>
+              </mat-form-field>
+          </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" type="submit" class=" mt-1">ورود</button>
+    </mat-card-actions>
+    <div class="mt-2">
+        <div class="d-flex justify-content-center links">
+            <a class="nav-link" [routerLink]="['../forget-password']">رمز عبور را فراموش کرده اید؟</a>
+        </div>
+    </div>
+    <div class="mt-2">
+        <div class="d-flex justify-content-center links">
+            <a class="nav-link" [routerLink]="['../register']">آیا حساب کاربری دارید؟ثبت نام</a>
+        </div>
+    </div>
+  <!--</mat-card>-->
+</form>

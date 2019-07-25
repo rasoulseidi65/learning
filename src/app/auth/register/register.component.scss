@@ -1,0 +1,44 @@
+.full-width {
+   width: 100%;
+ }
+
+.shipping-card {
+  min-width: 120px;
+  margin: 20px auto;
+}
+
+
+
+.row {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: -14px;
+}
+
+.col {
+  flex: 1;
+  margin-right: 1px;
+  margin-bottom: -5px;
+}
+
+.col:last-child {
+  margin-right: 0;
+}
+
+
+mat-form-field{
+  font-family: Iransans-Light;
+  color: white;
+}
+mat-card-header{
+  font-family: BTitrTGE;
+  text-align: center;
+  color: #000000;
+}
+::ng-deep.mat-error{
+  color: #000000;
+}
+
+::ng-deep.mat-form-field-infix {
+  margin-top: 4px;
+}
